@@ -4,8 +4,6 @@
 
 Dive into the exciting world of C++ programming with a unique blend of fun and functionality. This repo is your ultimate playground to explore, learn, and master C++ at your own pace.
 
-![Cpp_Modules]([https://yourimageurl.com](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgist.github.com%2Fvininjr%2Fd29bb07bdadb41e4b0923bc8fa748b1a&psig=AOvVaw25VB1ta-emomqLaiZwDcJ3&ust=1721079083555000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCKDO9q29p4cDFQAAAAAdAAAAABAE))
-
 ## 🌟 Features
 
 ### 🔥 **Daily Challenges**
@@ -51,8 +49,8 @@ We welcome contributions! Feel free to open issues and submit pull requests to h
 ## 💬 Connect
 
 - 📧 **Email**: abderrahmanech@outlook.fr
-- 🐦 **Twitter**: [@yourhandle](https://twitter.com/48k483x)
-- 💼 **LinkedIn**: [Your Profile]([https://www.linkedin.com/in/](https://www.linkedin.com/in/abdurrahman-chahrour-bb0865265/))
+- 🐦 **Twitter**: [@48K483X](https://twitter.com/48k483x)
+- 💼 **LinkedIn**: [@abkabex](https://www.linkedin.com/in/abdurrahman-chahrour-bb0865265/)
 
 ---
 
