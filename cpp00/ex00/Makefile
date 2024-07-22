@@ -4,14 +4,14 @@ SRC = megaphone.cpp
 
 NAME = megaphone
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
 	@c++ $(FLAGS) $(OBJ) -o $(NAME)
 
-%.o: %.c
+%.o: %.cpp
 	@c++ $(FLAGS) -c $< -o $@
 
 clean:
