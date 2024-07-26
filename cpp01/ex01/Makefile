@@ -1,6 +1,9 @@
 FLAGS = -g -std=c++98 -Wall -Wextra -Werror 
-SRC = main.cpp
-NAME = prog
+
+SRC = main.cpp  Zombie.cpp zombieHorde.cpp
+
+NAME = zombie
+
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)
