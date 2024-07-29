@@ -1,6 +1,6 @@
 FLAGS = -g -std=c++98 -Wall -Wextra -Werror 
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
+SRC = main.cpp
 
 NAME = program
 
