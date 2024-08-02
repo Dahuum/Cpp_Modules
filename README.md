@@ -2,6 +2,11 @@
 
 🎉 **Welcome to Cpp_Modules!** 🎉
 
+<div align="center">
+  <img src="rengoku.gif" alt="Rengoku">
+</div>
+
+
 Dive into the exciting world of C++ programming with a unique blend of fun and functionality. This repo is your ultimate playground to explore, learn, and master C++ at your own pace.
 
 ## 🌟 Features
