@@ -1,28 +1,28 @@
 #include "Fixed.hpp"
 
-Fixed::Fixed(): value(0) { std::cout << "Default constructor called" << std::endl; }
+Fixed::Fixed(): value(0) {}
 
 Fixed::Fixed(const Fixed& other)
 { 
-    std::cout << "Copy constructor called\n";
+    // std::cout << "Copy constructor called\n";
     *this = other;
 }
 
 Fixed::Fixed(int v)
 {
-    std::cout << "Int constructor called" << std::endl;
+    // std::cout << "Int constructor called" << std::endl;
     this->value = v * (1 << Fixed::bits);
 }
 
 Fixed::Fixed(float a)
 {
-    std::cout << "Float constructor called" << std::endl;
+    // std::cout << "Float constructor called" << std::endl;
     this->value = (int)roundf(a * (1 << Fixed::bits));
 }
 
 Fixed& Fixed::operator=(const Fixed& other)
 {
-    std::cout << "Copy assignment operator called" << std::endl;
+    // std::cout << "Copy assignment operator called" << std::endl;
     if (this != &other) this->setRawBits(other.getRawBits());
     return *this;
 }
@@ -74,19 +74,33 @@ bool Fixed::operator!=( const Fixed& other ) const {
 // Arithmetic operations
 
 Fixed Fixed::operator+( const Fixed& other ) const {
-    return Fixed( this->getRawBits() + other.getRawBits() );
+    Fixed result;
+    result.setRawBits((this->getRawBits() + other.getRawBits()) );
+    return result;
 }
 
 Fixed Fixed::operator-( const Fixed& other ) const {
-    return Fixed( this->getRawBits() - other.getRawBits() );
+    Fixed result;
+    result.setRawBits((this->getRawBits() - other.getRawBits()) );
+    return result;
 }
 
 Fixed Fixed::operator*( const Fixed& other ) const {
-    return Fixed( this->getRawBits() * other.getRawBits() );
+    Fixed result;
+    result.setRawBits((this->getRawBits() * other.getRawBits()) >> Fixed::bits);
+    return result;
 }
 
+
 Fixed Fixed::operator/( const Fixed& other ) const {
-    return Fixed( this->getRawBits() / other.getRawBits() );
+    if (other.getRawBits() == 0)
+    {
+        std::cerr << "Division by zero or near-zero value" << std::endl;
+        return Fixed(0);
+    }
+    Fixed result;
+    result.setRawBits((this->getRawBits() << Fixed::bits) / other.getRawBits() );
+    return result;
 }
 
 // Increment operations
@@ -141,4 +155,4 @@ const Fixed& Fixed::max( const Fixed &a, const Fixed &b ){
 
 
 
-Fixed::~Fixed(){ std::cout << "Destructor called" << std::endl; }
+Fixed::~Fixed(){}
