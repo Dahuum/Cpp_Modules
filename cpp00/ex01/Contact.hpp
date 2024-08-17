@@ -5,6 +5,7 @@
 #include <cstring>
 #include <cctype>
 #include <iomanip>
+#include <cstdlib>
 
 
 class Contact
