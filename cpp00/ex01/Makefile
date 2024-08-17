@@ -1,5 +1,5 @@
-FLAGS = -g -std=c++98 -Wall -Wextra -Werror 
-SRC = main.cpp
+FLAGS = -g3 -std=c++98 -Wall -Wextra -Werror 
+SRC = main.cpp Contact.cpp PhoneBook.cpp
 NAME = prog
 OBJ = $(SRC:.cpp=.o)
 
