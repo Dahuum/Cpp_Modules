@@ -1,6 +1,10 @@
-#include "ClapTrap.hpp"
+#include "ScavTrap.hpp"
 
-int main ( void )
+int main( void )
 {
-    std::cout << "ex01" << std::endl;
+    ScavTrap ST("abdurrahman");
+    ST.displayInfo();
+    ST.attack("abdurrahman");
+    ST.displayInfo();
+    ST.guardGate();
 }

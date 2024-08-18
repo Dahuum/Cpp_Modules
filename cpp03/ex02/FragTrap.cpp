@@ -1,31 +1,19 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(std::string n): ClapTrap(n)
+FragTrap::FragTrap(std::string n): ClapTrap(n)
 {
     std::cout << std::endl;
     std::cout << "-----------------" << std::endl;
-    std::cout << "Scav constructor" << std::endl;
+    std::cout << "Frag constructor" << std::endl;
     std::cout << "-----------------" << std::endl;
     std::cout << std::endl;
 
     this->hitPoint = 100;
-    this->energyPoint = 50;
-    this->attackDamage = 20;
+    this->energyPoint = 100;
+    this->attackDamage = 30;
 }
 
-void ScavTrap::guardGate()
-{
-    std::cout << std::endl;
-    std::cout << "ScavTrap " << name << ": Gate keeper mode active!" << std::endl;
-    std::cout << std::endl;
-}
-
-void ScavTrap::attack(const std::string& target)
-{
-    std::cout << "ANother message haha!!" << target << std::endl;
-}
-
- void ScavTrap::displayInfo()
+ void FragTrap::displayInfo()
  {
     // Directly accessing protected members
     std::cout << std::endl;
@@ -36,11 +24,16 @@ void ScavTrap::attack(const std::string& target)
     std::cout << std::endl;
 }
 
-ScavTrap::~ScavTrap()
+void FragTrap::highFivesGuys()
+{
+    std::cout << "FragTrap " << this->name << " enthusiastically requests a high five! ✋" << std::endl;
+}
+
+FragTrap::~FragTrap()
 {
     std::cout << std::endl;
     std::cout << "-----------------" << std::endl;
-    std::cout << "ScavTrap " << name << " offline. Farewell!" << std::endl;
+    std::cout << "FragTrap " << name << " offline. Farewell!" << std::endl;
     std::cout << "-----------------" << std::endl;
     std::cout << std::endl;
 }

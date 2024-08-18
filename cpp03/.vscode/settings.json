@@ -130,6 +130,13 @@
     "cinttypes": "cpp",
     "typeinfo": "cpp",
     "valarray": "cpp",
-    "variant": "cpp"
+    "variant": "cpp",
+    "bitset": "cpp",
+    "codecvt": "cpp",
+    "forward_list": "cpp",
+    "set": "cpp",
+    "unordered_set": "cpp",
+    "future": "cpp",
+    "stdfloat": "cpp"
   }
 }
