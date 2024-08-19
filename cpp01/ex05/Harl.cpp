@@ -35,10 +35,10 @@ void Harl::complain( std::string level )
 
     while (++i < 4)
     {
-        if (level == levels[i])
+        while (level == levels[i])
         {
             (this->*funcArray[i])();
-            return ;
+            std::exit(1);
         }
     }
     std::cout << "Not a Valid Level......" << std::endl;

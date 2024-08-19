@@ -34,10 +34,26 @@ void Harl::harlFilter( std::string level )
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
     size_t i = 0;
 
-    if (level == levels[0]) i = 0;
-    else if (level == levels[1]) i = 1;
-    else if (level == levels[2]) i = 3;
-    else if (level == levels[3]) i = 4;
+    while (level == levels[0])
+    {
+        i = 0;
+        break ;
+    }
+    while (level == levels[1])
+    {
+        i = 1;
+        break ;
+    }
+    while (level == levels[2])
+    {
+        i = 2;
+        break ;
+    }
+    while (level == levels[3])
+    {
+        i = 3;
+        break ;
+    }
 
     switch (i)
     {
