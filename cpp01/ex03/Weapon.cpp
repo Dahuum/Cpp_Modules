@@ -1,5 +1,7 @@
 #include "Weapon.hpp"
 
+Weapon::Weapon(): type("With His Hands...."){}
+
 Weapon::Weapon(const std::string& type): type(type) {}
 
 const std::string& Weapon::getType()

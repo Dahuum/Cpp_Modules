@@ -8,6 +8,26 @@ Harl::Harl()
     funcArray[3] = &Harl::error;
 }
 
+void Harl::debug(void) 
+{
+    std::cout << "Debug: Coffee machine is running low on beans." << std::endl;
+}
+
+void Harl::info(void) 
+{
+    std::cout << "Info: Daily system backup completed successfully." << std::endl;
+}
+
+void Harl::warning(void) 
+{
+    std::cout << "Warning: Disk space is almost full." << std::endl;
+}
+
+void Harl::error(void) 
+{
+    std::cout << "Error: Network connection lost!" << std::endl;
+}
+
 void Harl::complain( std::string level )
 {
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};

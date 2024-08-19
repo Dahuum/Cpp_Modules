@@ -1,13 +1,22 @@
 #include "Zombie.hpp"
 
-int main( void )
-{
-    int N;
+Zombie* zombieHorde(int N, std::string name);
 
-    std::cout << "Enter Your Horde Zombie Num: (N = ?):  ";
-    std::cin >> N;
-    Zombie* New = zombieHorde(N, "Yahyawat");
-    for(int i = 0; i < N; i++)
-        New[i].announce();
-    delete[] New;
+int main()
+{
+    int hordeSize = 2;
+    std::string zombieName = "Walker";
+
+    std::cout << "Creating a horde of " << hordeSize << " zombies named " << zombieName << std::endl;
+    
+    Zombie* horde = zombieHorde(hordeSize, zombieName);
+
+    std::cout << "Announcing each zombie in the horde:" << std::endl;
+    for (int i = 0; i < hordeSize; i++) {
+        std::cout << "Zombie " << i + 1 << ": ";
+        horde[i].announce();
+    }
+
+    std::cout << "Deleting the zombie horde" << std::endl;
+    delete[] horde;
 }

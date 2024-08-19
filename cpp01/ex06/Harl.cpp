@@ -8,10 +8,31 @@ Harl::Harl()
     funcArray[3] = &Harl::error;
 }
 
+void Harl::debug(void) 
+{
+    std::cout << "Debug: Coffee machine is running low on beans." << std::endl;
+}
+
+void Harl::info(void) 
+{
+    std::cout << "Info: Daily system backup completed successfully." << std::endl;
+}
+
+void Harl::warning(void) 
+{
+    std::cout << "Warning: Disk space is almost full." << std::endl;
+}
+
+void Harl::error(void) 
+{
+    std::cout << "Error: Network connection lost!" << std::endl;
+}
+
+
 void Harl::harlFilter( std::string level )
 {
     std::string levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    size_t i;
+    size_t i = 0;
 
     if (level == levels[0]) i = 0;
     else if (level == levels[1]) i = 1;
@@ -23,27 +44,12 @@ void Harl::harlFilter( std::string level )
         case 0:
             std::cout << "[ DEBUG ]" << std::endl;
             (this->*funcArray[0])();
-            std::cout << "[ INFO ]" << std::endl;
-            (this->*funcArray[1])();
-            std::cout << "[ WARNING ]" << std::endl;
-            (this->*funcArray[2])();
-            std::cout << "[ ERROR ]" << std::endl;
-            (this->*funcArray[3])();
-            break ;
         case 1:
             std::cout << "[ INFO ]" << std::endl;
             (this->*funcArray[1])();
-            std::cout << "[ WARNING ]" << std::endl;
-            (this->*funcArray[2])();
-            std::cout << "[ ERROR ]" << std::endl;
-            (this->*funcArray[3])();
-            break ;
         case 2:
             std::cout << "[ WARNING ]" << std::endl;
             (this->*funcArray[2])();
-            std::cout << "[ ERROR ]" << std::endl;
-            (this->*funcArray[3])();
-            break ;
         case 3:
             std::cout << "[ ERROR ]" << std::endl;
             (this->*funcArray[3])();

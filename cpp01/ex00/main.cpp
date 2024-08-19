@@ -1,10 +1,27 @@
 #include "Zombie.hpp"
 
-int main( void )
+int main()
 {
-    randomChump("Yahya");
+    std::cout << "Testing heap allocation:" << std::endl;
+    Zombie* heapZombie = newZombie("Heapy");
+    heapZombie->announce();
+    delete heapZombie;
 
-    Zombie* myZombie = newZombie("Moughit");
-    myZombie->announce();
-    delete myZombie;
+    std::cout << std::endl;
+
+    std::cout << "Testing stack allocation:" << std::endl;
+    randomChump("Stacky");
+
+    std::cout << std::endl;
+
+    std::cout << "Creating multiple zombies:" << std::endl;
+    Zombie stackZombie("DirectStack");
+    stackZombie.announce();
+
+    Zombie* anotherHeapZombie = newZombie("AnotherHeapy");
+    anotherHeapZombie->announce();
+    delete anotherHeapZombie;
+
+    randomChump("RandomChump1");
+    randomChump("RandomChump2");
 }

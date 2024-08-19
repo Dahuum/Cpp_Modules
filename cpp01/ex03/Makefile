@@ -1,27 +1,7 @@
-FLAGS = -g -std=c++98 -Wall -Wextra -Werror 
+all: weapon
 
-SRC = main.cpp HumanA.cpp HumanB.cpp Weapon.cpp
-
-NAME = program
-
-OBJ = $(SRC:.cpp=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	@c++ $(FLAGS) $(OBJ) -o $(NAME)
-
-%.o: %.cpp
-	@c++ $(FLAGS) -c $< -o $@
-
+weapon:
+	c++ -std=c++98 -Wall -Wextra -Werror *.cpp -o weapon
 clean:
-	@rm -rf $(OBJ)
-	@rm -rf *.o
-
-fclean: clean
-	@rm -rf $(NAME)
-
-re: fclean all
-
-.PHONY: all clean fclean re
-.SECONDARY: $(OBJ)
+	rm -rf weapon
+re: clean all
