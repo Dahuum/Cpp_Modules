@@ -1,27 +1,7 @@
-FLAGS = -g -std=c++98 -Wall -Wextra -Werror 
+all: Fixed
 
-SRC = main.cpp Fixed.cpp
-
-NAME = Fixed
-
-OBJ = $(SRC:.cpp=.o)
-
-all: $(NAME)
-
-$(NAME): $(OBJ)
-	@c++ $(FLAGS) $(OBJ) -o $(NAME)
-
-%.o: %.cpp
-	@c++ $(FLAGS) -c $< -o $@
-
+Fixed:
+	c++ -std=c++98 -Wall -Wextra -Werror *.cpp -o Fixed
 clean:
-	@rm -rf $(OBJ)
-	@rm -rf *.o
-
-fclean: clean
-	@rm -rf $(NAME)
-
-re: fclean all
-
-.PHONY: all clean fclean re
-.SECONDARY: $(OBJ)
+	rm -rf Fixed
+re: clean all

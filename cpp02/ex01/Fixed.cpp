@@ -31,16 +31,18 @@ int Fixed::getRawBits( void ) const { return this->value; }
 void Fixed::setRawBits( int const raw ) { this->value = raw; }
 
 
-int Fixed::toInt( void ) const {
+int Fixed::toInt( void ) const 
+{
     return this->value / (1 << Fixed::bits);
-    // i should get the idea about this ( return this->value >> this->bits )
 }
 
-float Fixed::toFloat( void ) const {
-    return (float)(this->value) / (float)(1 << Fixed::bits);
+float Fixed::toFloat( void ) const
+{
+    return (float)(this->value) / (float)(1 << Fixed::bits); 
 }
 
-std::ostream& operator<<(std::ostream& os, const Fixed& fixed) {
+std::ostream& operator<<(std::ostream& os, const Fixed& fixed)
+{
     os << fixed.toFloat();
     return os;
 }
