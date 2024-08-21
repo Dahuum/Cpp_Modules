@@ -3,7 +3,7 @@
 int main( void )
 {
     Fixed a;
-    a.setRawBits(1427);
+    // a.setRawBits();
     Fixed b( a );
     Fixed c;
 
