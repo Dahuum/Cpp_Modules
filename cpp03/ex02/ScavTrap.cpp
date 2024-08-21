@@ -20,9 +20,16 @@ void ScavTrap::guardGate()
     std::cout << std::endl;
 }
 
+
 void ScavTrap::attack(const std::string& target)
 {
-    std::cout << "ANother message haha!!" << target << std::endl;
+    // ClapTrap <name> blasts <target>. Damage: <damage>.
+    if (this->getEnergyPoints() > 0)
+    {
+        std::cout << "ScavTrap "  << this->getName() << " blasts " << target << " . Damage: " << this->attackDamage << std::endl;
+        this->energyPoint--;
+    }
+    else std::cout << "Oh no! ClapTrap " << this->getName() << " has run out of juice! No energy left to attack " << target << "!" << std::endl;
 }
 
  void ScavTrap::displayInfo()

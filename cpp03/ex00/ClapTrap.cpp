@@ -11,6 +11,8 @@ ClapTrap::ClapTrap(): name("Unknown"), hitPoint(10), energyPoint(10), attackDama
 
 ClapTrap::ClapTrap(const std::string& n ): name(n), hitPoint(10), energyPoint(10), attackDamage(0)
 {
+    if (n.empty())
+        this->name = "Unknown";
     std::cout << std::endl;
     std::cout << "-----------------" << std::endl;
     std::cout << "manza constructor" << std::endl;

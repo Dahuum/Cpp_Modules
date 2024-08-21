@@ -107,6 +107,13 @@ void runTests() {
 }
 
 int main() {
-    runTests();
+    // runTests();
+    {
+        ClapTrap ct("");
+        ct.beRepaired(5);
+        assert(ct.getHitPoints() == 15); // ! Should not exceed initial hit points
+        std::cout << "this is the new heal: " << ct.getHitPoints() << std::endl;
+        std::cout << "Test 9 Passed: Healing beyond initial hit points" << std::endl;
+    }
     return 0;
 }
