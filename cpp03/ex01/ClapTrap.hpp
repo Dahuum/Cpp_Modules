@@ -15,7 +15,7 @@
         unsigned int getAttackDamage();
         std::string getName();
     public:
-        ClapTrap();                                  // Constructor
+    ClapTrap();                                  // Constructor
         ClapTrap( const std::string& n );            // Constructor with name parameter
         ClapTrap( const ClapTrap& other );           // Copy constructor
         ClapTrap& operator=( const ClapTrap& other );// Copy assignment operator

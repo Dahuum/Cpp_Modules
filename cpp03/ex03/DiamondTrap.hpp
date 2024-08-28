@@ -9,9 +9,15 @@ class DiamondTrap: public ScavTrap, public FragTrap
         std::string name;
     
     public:
+        DiamondTrap();
         DiamondTrap( std::string n );
+        DiamondTrap( const DiamondTrap& other );
+        DiamondTrap& operator=( const DiamondTrap& other );
+        
         using ScavTrap::attack;
         void whoAmI();
+        
+        ~DiamondTrap();
 };
 
 #endif

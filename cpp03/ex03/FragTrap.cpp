@@ -1,6 +1,43 @@
 #include "FragTrap.hpp"
 
-FragTrap::FragTrap(){}
+FragTrap::FragTrap()
+{
+    std::cout << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << "Frag default constructor" << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << std::endl;
+
+    this->hitPoint = 100;
+    this->energyPoint = 100;
+    this->attackDamage = 30;
+}
+
+FragTrap::FragTrap(const FragTrap& other): ClapTrap(other)
+{
+    std::cout << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << "Frag copy constructor" << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << std::endl;
+
+    *this = other;
+}
+
+FragTrap& FragTrap::operator=(const FragTrap& other)
+{
+    std::cout << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << "Frag operator=" << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << std::endl;
+
+    this->name = other.name;
+    this->hitPoint = other.hitPoint;
+    this->energyPoint = other.energyPoint;
+    this->attackDamage = other.attackDamage;
+    return *this;
+}
 
 FragTrap::FragTrap(std::string n): ClapTrap(n)
 {

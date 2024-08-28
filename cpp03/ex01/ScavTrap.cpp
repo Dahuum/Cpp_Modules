@@ -1,5 +1,18 @@
 #include "ScavTrap.hpp"
 
+ScavTrap::ScavTrap()
+{
+    this->name = "Unknown";
+    this->hitPoint = 100;
+    this->energyPoint = 50;
+    this->attackDamage = 20;
+    std::cout << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << "ClapClap constructor" << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << std::endl;
+}
+
 ScavTrap::ScavTrap(std::string n): ClapTrap(n)
 {
     std::cout << std::endl;
@@ -11,6 +24,32 @@ ScavTrap::ScavTrap(std::string n): ClapTrap(n)
     this->hitPoint = 100;
     this->energyPoint = 50;
     this->attackDamage = 20;
+}
+
+ScavTrap::ScavTrap(const ScavTrap& other): ClapTrap(other)
+{
+    std::cout << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << "Scav copy constructor" << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << std::endl;
+
+    *this = other;
+}
+
+ScavTrap& ScavTrap::operator=(const ScavTrap& other)
+{
+    std::cout << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << "Scav operator=" << std::endl;
+    std::cout << "-----------------" << std::endl;
+    std::cout << std::endl;
+
+    this->name = other.name;
+    this->hitPoint = other.hitPoint;
+    this->energyPoint = other.energyPoint;
+    this->attackDamage = other.attackDamage;
+    return *this;
 }
 
 void ScavTrap::guardGate()

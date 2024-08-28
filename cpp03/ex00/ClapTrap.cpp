@@ -4,7 +4,7 @@ ClapTrap::ClapTrap(): name("Unknown"), hitPoint(10), energyPoint(10), attackDama
 {
     std::cout << std::endl;
     std::cout << "-----------------" << std::endl;
-    std::cout << "manza constructor" << std::endl;
+    std::cout << "ClapClap constructor" << std::endl;
     std::cout << "-----------------" << std::endl;
     std::cout << std::endl;
 }
