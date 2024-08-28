@@ -16,7 +16,7 @@ class DiamondTrap: public ScavTrap, public FragTrap
         
         using ScavTrap::attack;
         void whoAmI();
-        
+        void displayInfo() { std::cout << "Name: " << name << ", HP: " << hitPoint << ", EP: " << energyPoint << ", AD: " << attackDamage << std::endl; }
         ~DiamondTrap();
 };
 

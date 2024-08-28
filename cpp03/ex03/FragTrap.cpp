@@ -2,12 +2,7 @@
 
 FragTrap::FragTrap()
 {
-    std::cout << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << "Frag default constructor" << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << std::endl;
-
+    std::cout << "FragTrap created." << std::endl;
     this->hitPoint = 100;
     this->energyPoint = 100;
     this->attackDamage = 30;
@@ -15,64 +10,42 @@ FragTrap::FragTrap()
 
 FragTrap::FragTrap(const FragTrap& other): ClapTrap(other)
 {
-    std::cout << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << "Frag copy constructor" << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << std::endl;
-
+    std::cout << "FragTrap copied." << std::endl;
     *this = other;
 }
 
 FragTrap& FragTrap::operator=(const FragTrap& other)
 {
-    std::cout << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << "Frag operator=" << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << std::endl;
-
-    this->name = other.name;
-    this->hitPoint = other.hitPoint;
-    this->energyPoint = other.energyPoint;
-    this->attackDamage = other.attackDamage;
+    if (this != &other)
+    {
+        this->name = other.name;
+        this->hitPoint = other.hitPoint;
+        this->energyPoint = other.energyPoint;
+        this->attackDamage = other.attackDamage;
+    }
+    std::cout << "FragTrap assigned." << std::endl;
     return *this;
 }
 
 FragTrap::FragTrap(std::string n): ClapTrap(n)
 {
-    std::cout << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << "Frag constructor" << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << std::endl;
-
+    std::cout << "FragTrap " << this->name << " created." << std::endl;
     this->hitPoint = 100;
     this->energyPoint = 100;
     this->attackDamage = 30;
 }
 
- void FragTrap::displayInfo()
- {
-    // Directly accessing protected members
-    std::cout << std::endl;
-    std::cout << "Name: " << name << std::endl;
-    std::cout << "Hit Points: " << hitPoint << std::endl;
-    std::cout << "Energy Points: " << energyPoint << std::endl;
-    std::cout << "Attack Damage: " << attackDamage << std::endl;
-    std::cout << std::endl;
+void FragTrap::displayInfo()
+{
+    std::cout << "Name: " << name << ", HP: " << hitPoint << ", EP: " << energyPoint << ", AD: " << attackDamage << std::endl;
 }
 
 void FragTrap::highFivesGuys()
 {
-    std::cout << "FragTrap " << this->name << " enthusiastically requests a high five! ✋" << std::endl;
+    std::cout << "FragTrap " << this->name << " requests a high five! ✋" << std::endl;
 }
 
 FragTrap::~FragTrap()
 {
-    std::cout << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << "FragTrap " << name << " offline. Farewell!" << std::endl;
-    std::cout << "-----------------" << std::endl;
-    std::cout << std::endl;
+    std::cout << "FragTrap " << name << " destroyed." << std::endl;
 }

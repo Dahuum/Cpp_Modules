@@ -11,6 +11,7 @@
 
 int main( void )
 {
-    DiamondTrap DT("abdu");
+    DiamondTrap DT;
     DT.whoAmI();
+    DT.displayInfo();
 }
