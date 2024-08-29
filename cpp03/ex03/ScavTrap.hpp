@@ -6,6 +6,9 @@
 class ScavTrap: virtual public ClapTrap
 {
     public:
+        static const int DEFAULT_HIT_POINTS = 100;
+        static const int DEFAULT_ENERGY_POINTS = 50;
+        static const int DEFAULT_ATTACK_DAMAGE = 20;
         ScavTrap();
         ScavTrap( std::string n );
         ScavTrap(const ScavTrap& other );

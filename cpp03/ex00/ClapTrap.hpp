@@ -16,13 +16,12 @@ class ClapTrap {
         ClapTrap& operator=( const ClapTrap& other );// Copy assignment operator
         ~ClapTrap();                                 // Destructor
 
-        std::string getName() {  return this->name;  };
-        unsigned int getHitPoints(){  return this->hitPoint;  }
-        unsigned int getEnergyPoints(){  return this->energyPoint;  }
-        unsigned int getAttackDamage() {  return this->attackDamage;  }
         void attack( const std::string& target );
         void takeDamage( unsigned int amount );
         void beRepaired( unsigned int amount );
+
+        // TEST Func();
+        friend void runTests();
 };
 
 #endif

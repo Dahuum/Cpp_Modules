@@ -3,9 +3,9 @@
 FragTrap::FragTrap()
 {
     std::cout << "FragTrap created." << std::endl;
-    this->hitPoint = 100;
-    this->energyPoint = 100;
-    this->attackDamage = 30;
+    this->hitPoint = DEFAULT_HIT_POINTS;
+    this->energyPoint = DEFAULT_ENERGY_POINTS;
+    this->attackDamage = DEFAULT_ATTACK_DAMAGE;
 }
 
 FragTrap::FragTrap(const FragTrap& other): ClapTrap(other)

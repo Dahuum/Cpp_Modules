@@ -141,5 +141,6 @@
     "valarray": "cpp",
     "variant": "cpp",
     "coroutine": "cpp"
-  }
+  },
+  "C_Cpp.dimInactiveRegions": false
 }

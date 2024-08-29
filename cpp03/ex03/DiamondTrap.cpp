@@ -3,15 +3,15 @@
 // Constructor with no parameters
 DiamondTrap::DiamondTrap() : ClapTrap("Unknown_clap_name"), ScavTrap(), FragTrap(),  name("Unknown") {
     this->hitPoint = FragTrap::hitPoint;
-    this->energyPoint = ScavTrap::energyPoint;
+    this->energyPoint = ScavTrap::DEFAULT_ENERGY_POINTS;
     this->attackDamage = FragTrap::attackDamage;
 }
 
 // Constructor with name parameter
 DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name"), ScavTrap(n), FragTrap(n), name(n) {
-    this->hitPoint = FragTrap::hitPoint;
-    this->energyPoint = ScavTrap::energyPoint;
-    this->attackDamage = FragTrap::attackDamage;
+    this->hitPoint = FragTrap::DEFAULT_HIT_POINTS;
+    this->energyPoint = ScavTrap::DEFAULT_ENERGY_POINTS;
+    this->attackDamage = FragTrap::DEFAULT_ATTACK_DAMAGE;
 }
 // Copy constructor
 DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other), ScavTrap(other), FragTrap(other) {

@@ -11,10 +11,9 @@ ScavTrap::ScavTrap()
 
 ScavTrap::ScavTrap(std::string n): ClapTrap(n)
 {
-    this->hitPoint = 100;
-    this->energyPoint = 50;
-    this->attackDamage = 20;
-    std::cout << "ScavTrap energi: hhah:  " << ScavTrap::energyPoint << std::endl;
+    this->hitPoint = DEFAULT_HIT_POINTS;
+    this->energyPoint = DEFAULT_ENERGY_POINTS;
+    this->attackDamage = DEFAULT_ATTACK_DAMAGE;
     std::cout << "ScavTrap created: " << this->name << std::endl;
 }
 

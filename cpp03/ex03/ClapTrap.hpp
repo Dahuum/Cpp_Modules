@@ -3,6 +3,10 @@
 
 #include <iostream>
 
+# define CLAPTRAP_DEFAULT_HIT_POINTS 10
+# define CLAPTRAP_DEFAULT_ENERGY_POINTS 10
+# define CLAPTRAP_DEFAULT_ATTACK_DAMAGE 0
+
  class ClapTrap {
     protected:
         std::string name;
