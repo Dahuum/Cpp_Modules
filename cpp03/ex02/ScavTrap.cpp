@@ -1,6 +1,6 @@
 #include "ScavTrap.hpp"
 
-ScavTrap::ScavTrap()
+ScavTrap::ScavTrap() : ClapTrap()
 {
     this->name = "Unknown";
     this->hitPoint = 100;
@@ -17,7 +17,7 @@ ScavTrap::ScavTrap(std::string n): ClapTrap(n)
     std::cout << "ScavTrap created: " << this->name << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap& other)
+ScavTrap::ScavTrap(const ScavTrap& other): ClapTrap(other)
 {
     *this = other;
     std::cout << "ScavTrap copied: " << this->name << std::endl;

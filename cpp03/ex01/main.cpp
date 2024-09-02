@@ -7,4 +7,5 @@ int main( void )
     ST.attack("abdurrahman");
     ST.displayInfo();
     ST.guardGate();
+    ST.takeDamage(10);
 }

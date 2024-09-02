@@ -6,6 +6,6 @@ int main( void )
     FT.displayInfo();
     FT.attack("abdurrahman");
     FT.displayInfo();
-
+    
     FT.highFivesGuys();
 }

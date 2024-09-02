@@ -12,10 +12,14 @@ ClapTrap::ClapTrap(const std::string& n ): name(n), hitPoint(10), energyPoint(10
     std::cout << "ClapTrap constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap( const ClapTrap& other ) {   *this = other;   }
+ClapTrap::ClapTrap( const ClapTrap& other ) {
+    std::cout << "ClapTrap Copy constructor" << std::endl;
+    *this = other;   
+}
 
 ClapTrap& ClapTrap::operator=( const ClapTrap& other )
 {
+    std::cout << "ClapTrap Assignment operator" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -60,6 +64,11 @@ void ClapTrap::takeDamage( unsigned int amount )
         std::cout << "ClapTrap " << this->name << " is out of HP!" << std::endl;
     }
 }
+
+std::string ClapTrap::getName() const { return name; }
+unsigned int ClapTrap::getHitPoints() const { return hitPoint; }
+unsigned int ClapTrap::getEnergyPoints() const { return energyPoint; }
+unsigned int ClapTrap::getAttackDamage() const { return attackDamage; }
 
 ClapTrap::~ClapTrap()
 {

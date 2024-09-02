@@ -29,11 +29,6 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
     return *this;
 }
 
-std::string ClapTrap::getName() { return this->name; }
-unsigned int ClapTrap::getHitPoints() { return this->hitPoint; }
-unsigned int ClapTrap::getEnergyPoints() { return this->energyPoint; }
-unsigned int ClapTrap::getAttackDamage() { return this->attackDamage; }
-
 void ClapTrap::attack(const std::string& target)
 {
     if (this->energyPoint > 0)
