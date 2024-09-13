@@ -5,11 +5,9 @@ ClapTrap::ClapTrap(): name("Unknown"), hitPoint(10), energyPoint(10), attackDama
     std::cout << "ClapTrap Default constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& n ): name(n), hitPoint(10), energyPoint(10), attackDamage(0)
+ClapTrap::ClapTrap( const std::string& name ): name(name), hitPoint(10), energyPoint(10), attackDamage(0)
 {
-    if (n.empty())
-        this->name = "Unknown";
-    std::cout << "ClapTrap constructor" << std::endl;
+    std::cout << "ClapTrap Parameter constructor" << std::endl;
 }
 
 ClapTrap::ClapTrap( const ClapTrap& other ) {
@@ -51,7 +49,7 @@ void ClapTrap::beRepaired( unsigned int amount )
     else std::cout << "ClapTrap " << this->name << " is out of energy!" << std::endl;
 }
 
-void ClapTrap::takeDamage( unsigned int amount )
+void ClapTrap::takeDamage( unsigned int amount ) 
 {
     if (this->hitPoint > 0 && this->hitPoint >= amount)
     {
@@ -65,6 +63,13 @@ void ClapTrap::takeDamage( unsigned int amount )
     }
 }
 
+// Setters
+void ClapTrap::setName(const std::string& name) { this->name = name; }
+void ClapTrap::setHitPoints(unsigned int hitPoints) { this->hitPoint = hitPoints; }
+void ClapTrap::setEnergyPoints(unsigned int energyPoints) { this->energyPoint = energyPoints; }
+void ClapTrap::setAttackDamage(unsigned int attackDamage) { this->attackDamage = attackDamage; }
+
+// Getters
 std::string ClapTrap::getName() const { return name; }
 unsigned int ClapTrap::getHitPoints() const { return hitPoint; }
 unsigned int ClapTrap::getEnergyPoints() const { return energyPoint; }

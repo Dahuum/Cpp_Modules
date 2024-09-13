@@ -10,13 +10,13 @@ class DiamondTrap: public ScavTrap, public FragTrap
     
     public:
         DiamondTrap();
-        DiamondTrap( std::string n );
+        DiamondTrap( const std::string& _name );
         DiamondTrap( const DiamondTrap& other );
         DiamondTrap& operator=( const DiamondTrap& other );
         
         using ScavTrap::attack;
         void whoAmI();
-        void displayInfo() { std::cout << "Name: " << name << ", HP: " << hitPoint << ", EP: " << energyPoint << ", AD: " << attackDamage << std::endl; }
+        void displayInfo();
         ~DiamondTrap();
 };
 

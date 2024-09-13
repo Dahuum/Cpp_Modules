@@ -2,22 +2,22 @@
 
 ClapTrap::ClapTrap(): name("Unknown"), hitPoint(10), energyPoint(10), attackDamage(0)
 {
-    std::cout << "ClapTrap created: " << this->name << std::endl;
+    std::cout << "ClapTrap Default constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const std::string& n): name(n), hitPoint(10), energyPoint(10), attackDamage(0)
+ClapTrap::ClapTrap( const std::string& name ): name(name), hitPoint(10), energyPoint(10), attackDamage(0)
 {
-    std::cout << "ClapTrap created: " << this->name << std::endl;
+    std::cout << "ClapTrap Parameter constructor" << std::endl;
 }
 
-ClapTrap::ClapTrap(const ClapTrap& other)
-{
-    *this = other;
-    std::cout << "ClapTrap copied: " << this->name << std::endl;
+ClapTrap::ClapTrap( const ClapTrap& other ) {
+    std::cout << "ClapTrap Copy constructor" << std::endl;
+    *this = other;   
 }
 
-ClapTrap& ClapTrap::operator=(const ClapTrap& other)
+ClapTrap& ClapTrap::operator=( const ClapTrap& other )
 {
+    std::cout << "ClapTrap Assignment operator" << std::endl;
     if (this != &other)
     {
         this->name = other.name;
@@ -25,57 +25,57 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& other)
         this->energyPoint = other.energyPoint;
         this->attackDamage = other.attackDamage;
     }
-    std::cout << "ClapTrap assigned: " << this->name << std::endl;
     return *this;
 }
 
-std::string ClapTrap::getName() { return this->name; }
-unsigned int ClapTrap::getHitPoints() { return this->hitPoint; }
-unsigned int ClapTrap::getEnergyPoints() { return this->energyPoint; }
-unsigned int ClapTrap::getAttackDamage() { return this->attackDamage; }
-
-void ClapTrap::attack(const std::string& target)
+void ClapTrap::attack( const std::string& target )
 {
     if (this->energyPoint > 0)
     {
-        std::cout << "ClapTrap " << this->name << " attacks " << target << " for " << this->attackDamage << " damage." << std::endl;
+        std::cout << "ClapTrap "  << this->name << " attacks " << target << " for " << this->attackDamage << " damage." << std::endl;
         this->energyPoint--;
     }
-    else
-    {
-        std::cout << "ClapTrap " << this->name << " is out of energy!" << std::endl;
-    }
+    else std::cout << "ClapTrap " << this->name << " is out of energy!" << std::endl;
 }
 
-void ClapTrap::beRepaired(unsigned int amount)
+void ClapTrap::beRepaired( unsigned int amount )
 {
     if (this->energyPoint > 0)
     {
         this->hitPoint += amount;
         this->energyPoint--;
-        std::cout << "ClapTrap " << this->name << " repaired for " << amount << " HP." << std::endl;
+        std::cout << "ClapTrap " << this->name << " repairs for " << amount << " HP." << std::endl;
     }
-    else
-    {
-        std::cout << "ClapTrap " << this->name << " is out of energy!" << std::endl;
-    }
+    else std::cout << "ClapTrap " << this->name << " is out of energy!" << std::endl;
 }
 
-void ClapTrap::takeDamage(unsigned int amount)
+void ClapTrap::takeDamage( unsigned int amount ) 
 {
     if (this->hitPoint > 0 && this->hitPoint >= amount)
     {
         this->hitPoint -= amount;
         std::cout << "ClapTrap " << this->name << " takes " << amount << " damage." << std::endl;
     }
-    else
+    else 
     {
         this->hitPoint = 0;
         std::cout << "ClapTrap " << this->name << " is out of HP!" << std::endl;
     }
 }
 
+// Setters
+void ClapTrap::setName(const std::string& name) { this->name = name; }
+void ClapTrap::setHitPoints(unsigned int hitPoints) { this->hitPoint = hitPoints; }
+void ClapTrap::setEnergyPoints(unsigned int energyPoints) { this->energyPoint = energyPoints; }
+void ClapTrap::setAttackDamage(unsigned int attackDamage) { this->attackDamage = attackDamage; }
+
+// Getters
+std::string ClapTrap::getName() const { return name; }
+unsigned int ClapTrap::getHitPoints() const { return hitPoint; }
+unsigned int ClapTrap::getEnergyPoints() const { return energyPoint; }
+unsigned int ClapTrap::getAttackDamage() const { return attackDamage; }
+
 ClapTrap::~ClapTrap()
 {
-    std::cout << "ClapTrap destroyed: " << this->name << std::endl;
+    std::cout << "ClapTrap Destructor" << std::endl;
 }

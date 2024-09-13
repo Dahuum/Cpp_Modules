@@ -1,46 +1,62 @@
 #include "DiamondTrap.hpp"
 
 // Constructor with no parameters
-DiamondTrap::DiamondTrap() : ClapTrap("Unknown_clap_name"), ScavTrap(), FragTrap(),  name("Unknown") {
-    this->hitPoint = FragTrap::hitPoint;
-    this->energyPoint = ScavTrap::DEFAULT_ENERGY_POINTS;
-    this->attackDamage = FragTrap::attackDamage;
+DiamondTrap::DiamondTrap() : ClapTrap(), ScavTrap(), FragTrap(),  name("Unknown") 
+{
+    this->name = "Unknown";
+    this->setName("Unknown_clap_name");
+    this->setHitPoints(100);
+    this->setEnergyPoints(50);
+    this->setAttackDamage(30);
 }
 
-// Constructor with name parameter
-DiamondTrap::DiamondTrap(std::string n) : ClapTrap(n + "_clap_name"), ScavTrap(n), FragTrap(n), name(n) {
-    this->hitPoint = FragTrap::DEFAULT_HIT_POINTS;
-    this->energyPoint = ScavTrap::DEFAULT_ENERGY_POINTS;
-    this->attackDamage = FragTrap::DEFAULT_ATTACK_DAMAGE;
-}
 // Copy constructor
-DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other), ScavTrap(other), FragTrap(other) {
+DiamondTrap::DiamondTrap(const DiamondTrap& other) : ClapTrap(other), ScavTrap(other), FragTrap(other) 
+{
     std::cout << "Diamond copy constructor" << std::endl;
     *this = other;
 }
 
+// Constructor with name parameter
+DiamondTrap::DiamondTrap(const std::string& _name) : ClapTrap(_name + "_clap_name"), ScavTrap(_name), FragTrap(_name) 
+{
+    this->name = _name;
+    this->setName(_name + "_clap_name");
+    this->setHitPoints(100);
+    this->setEnergyPoints(50);
+    this->setAttackDamage(30);
+}
 
 // Assignment operator
-DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other) {
+DiamondTrap& DiamondTrap::operator=(const DiamondTrap& other) 
+{
     std::cout << "Diamond operator=" << std::endl;
     if (this != &other) {
         ClapTrap::operator=(other);
         FragTrap::operator=(other);
         ScavTrap::operator=(other);
         this->name = other.name;
-        this->hitPoint = other.hitPoint;
-        this->energyPoint = other.energyPoint;
-        this->attackDamage = other.attackDamage;
+        this->setHitPoints(other.getHitPoints());
+        this->setEnergyPoints(other.getEnergyPoints());
+        this->setAttackDamage(other.getAttackDamage());
     }
     return *this;
 }
 
+// Display info function
+void DiamondTrap::displayInfo() 
+{
+    std::cout << "Name: " << this->name << ", HP: " << this->getHitPoints() << ", EP: " << this->getEnergyPoints() << ", AD: " << this->getAttackDamage() << std::endl;
+}
+
 // whoAmI function
-void DiamondTrap::whoAmI() {
+void DiamondTrap::whoAmI() 
+{
     std::cout << "This is my name: " << this->name << std::endl;
-    std::cout << "And this is ClapTrap name: " << ClapTrap::name << std::endl;
+    std::cout << "And this is ClapTrap name: " << ClapTrap::getName() << std::endl;
 }
 // Destructor
-DiamondTrap::~DiamondTrap() {
+DiamondTrap::~DiamondTrap() 
+{
     std::cout << "DiamondTrap destructor" << std::endl;
 }
