@@ -1,7 +1,7 @@
 all: DiamondTrap
 
 DiamondTrap: *.cpp
-	c++  -Wshadow     *.cpp -o DiamondTrap
+	c++  -std=c++98 -Wall -Wextra -Werror *.cpp -o DiamondTrap
 clean:
 	rm -rf DiamondTrap
 

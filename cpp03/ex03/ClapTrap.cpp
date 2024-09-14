@@ -8,7 +8,6 @@ ClapTrap::ClapTrap(): name("Unknown"), hitPoint(10), energyPoint(10), attackDama
 ClapTrap::ClapTrap( const std::string& _name ): name(_name), hitPoint(10), energyPoint(10), attackDamage(0)
 {
     std::cout << "ClapTrap Parameter constructor" << std::endl;
-    printf("Name: %s\n", name.c_str());
 }
 
 ClapTrap::ClapTrap( const ClapTrap& other ) {

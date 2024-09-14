@@ -8,6 +8,17 @@
         DiamondTrap
 */
 
+// Virtual Table (vtable): A table that stores pointers to the class's virtual
+// functions and the shared parts of the class it inherits from.
+
+// Virtual Base Pointer (vbp): A pointer added by the compiler to each class 
+// that inherits from another class using virtual inheritance. It points to the 
+// shared instance of the base class.
+
+// Single Instance: The vbp ensures that all classes using virtual inheritance 
+// share the same instance of the base class, avoiding multiple copies in memory.
+
+
 #include "DiamondTrap.hpp"
 #include <iostream>
 
