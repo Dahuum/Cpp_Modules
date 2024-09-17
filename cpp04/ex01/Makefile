@@ -1,7 +1,7 @@
 all: animals
 
 animals: *.cpp
-	c++  -Wall -Wextra  *.cpp -o animals
+	c++ -std=c++98  -Wall -Wextra  *.cpp -o animals
 
 clean:
 	rm -rf animals
