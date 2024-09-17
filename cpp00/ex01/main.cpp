@@ -5,13 +5,15 @@ int main(void)
 	PhoneBook P;
 	std::string user_input;
 
+	Contact c;
+
 	while (1337)
 	{
 		std::cout << "Enter Your Command :(ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, user_input);
 		if (std::cin.eof())
 			break;
-		else if ((user_input == "add") || (user_input == "ADD"))
+		 if ((user_input == "add") || (user_input == "ADD"))
 			P.add();
 		else if ((user_input == "SEARCH") || (user_input == "search"))
 		{

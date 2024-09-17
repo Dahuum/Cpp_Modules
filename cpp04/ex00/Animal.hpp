@@ -12,6 +12,12 @@ class Animal {
         Animal( std::string type );
         Animal( const Animal &other );
         Animal &operator = ( const Animal &other );
+        
+    /*
+        Virtual Destructor
+        |
+        +--> Ensures proper destructor calls in derived classesd
+    */
         virtual ~Animal();
 
         virtual void makeSound() const;

@@ -21,7 +21,7 @@
 int main()
 {
     std::cout << "--- Basic Animal Array Test ---" << std::endl;
-    const int arraySize = 2;
+    const int arraySize = 4;
     Animal* animals[arraySize];
 
     // Fill array with Dogs and Cats
