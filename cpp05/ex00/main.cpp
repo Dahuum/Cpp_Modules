@@ -1,7 +1,21 @@
-#include <iostream>
+# include "Bureaucrat.hpp"
 
 int main( void )
 {
-    std::cout << "Welcome to the bureaucrat (cpp05)" << std::endl;
-    return 0;
+    try
+    {
+        Bureaucrat abdu("Zabania", 0);
+    }
+    catch (const Bureaucrat::GradeTooLowException& e)
+    {
+        std::cerr << "Caught an exception: " << e.what() << std::endl;
+    }
+
+    catch (const Bureaucrat::GradeTooHighException& e)
+    {
+        std::cerr << "Caught an exception: " << e.what() << std::endl;
+    }
+
+    // std::cout << "Name = " << abdu.getName() << std::endl;
+    // std::cout << "Grade = " << abdu.getGrade() << std::endl;
 }
