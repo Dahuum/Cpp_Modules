@@ -1,7 +1,7 @@
 #pragma once
 
 # include "Bureaucrat.hpp"
-
+class Bureaucrat;
 class Form {
   private:
     const std::string name;
@@ -30,12 +30,13 @@ class Form {
       };
 
       // Getter for all attributes
-      const std::string getName();
-      bool getSignStatus();
-      const int getGradeToSign();
-      const int getGradeToExecute();
+      std::string getName() const;
+      bool getSignStatus() const;
+      int getGradeToSign() const;
+      int getGradeToExecute() const;
 
       // Sign Functions
       void beSigned(const Bureaucrat& other);
-      void signForm();
 };
+
+std::ostream& operator<<(std::ostream& os, const Form& F);

@@ -1,6 +1,6 @@
 # include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(): name("Default Name"), grade(75) 
+Bureaucrat::Bureaucrat(): name("Default Name"), grade(75)
 {
     std::cout << "Bureaucrat: Default Constructor Called" << std::endl;
 }
@@ -53,11 +53,24 @@ void Bureaucrat::decrementGrade()
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj)
 {
     os << "Bureaucrat: " << obj.getName()
-       << " | Grade: " << obj.getGrade() 
+       << " | Grade: " << obj.getGrade()
        << " | Status: " << (obj.getGrade() <= 50 ? "Senior" : "Junior");
     return os;
 }
 
+void Bureaucrat::signForm(Form& other)
+{
+      try
+    {
+        other.beSigned(*this);
+        std::cout << this->getName() << " has successfully signed the " << other.getName() << " form" << std::endl;
+
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << this->getName() << " failed to sign " << other.getName() << " due to " << e.what() << std::endl;
+    }
+}
 
 Bureaucrat::~Bureaucrat()
 {

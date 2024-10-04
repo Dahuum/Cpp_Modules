@@ -1,7 +1,7 @@
 all: bureaucrat
 
 bureaucrat: *.cpp
-	c++ -Wall -Wextra -Werror *.cpp -o bureaucrat -std=c++98
+	c++ -std=c++98 -Wall -Wextra -Werror *.cpp -o bureaucrat
 
 clean:
 	rm -rf bureaucrat

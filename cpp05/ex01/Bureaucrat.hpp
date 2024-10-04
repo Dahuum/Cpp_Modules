@@ -3,7 +3,9 @@
 # include <iostream>
 # include <string.h>
 # include <cstdbool>
+# include "Form.hpp"
 
+class Form;
 class Bureaucrat {
     private:
         const std::string name;
@@ -30,6 +32,8 @@ class Bureaucrat {
         int getGrade() const;
         void incrementGrade();
         void decrementGrade();
+
+        void signForm(Form& other);
 
 };
 
