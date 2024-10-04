@@ -1,6 +1,6 @@
 # include "Bureaucrat.hpp"
 
-Bureaucrat::Bureaucrat(): name("Default Name"), grade(75) 
+Bureaucrat::Bureaucrat(): name("Default Name"), grade(75)
 {
     std::cout << "Bureaucrat: Default Constructor Called" << std::endl;
 }
@@ -53,7 +53,7 @@ void Bureaucrat::decrementGrade()
 std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj)
 {
     os << "Bureaucrat: " << obj.getName()
-       << " | Grade: " << obj.getGrade() 
+       << " | Grade: " << obj.getGrade()
        << " | Status: " << (obj.getGrade() <= 50 ? "Senior" : "Junior");
     return os;
 }
