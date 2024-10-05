@@ -19,11 +19,7 @@ ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationF
 {
     std::cout << "ShrubberyCreationForm: Copy Assignment Operator Called" << std::endl;
     if (this != &other)
-    {
       AForm::operator=(other);
-      this->exec = other.exec;
-      this->sign = other.sign;
-    }
     return *this;
 }
 
@@ -35,16 +31,15 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
   if (this->getSignStatus() == false) throw AForm::NotSignedException();
-  std::cout << "executor grade: " << executor.getGrade() << std::endl;
-  std::cout << "exec grade: " << this->exec << std::endl;
-  if (executor.getGrade() > this->exec) throw AForm::GradeTooLowException();
+  if (executor.getGrade() > this->getGradeToSign()) throw AForm::GradeTooLowException();
 
-  std::ofstream file(this->getName() + "_shrubbery");
+  std::ofstream file((this->getName() + "_shrubbery").c_str());
   if (!file.is_open())
   {
     std::cerr << "Error: Could not open file" << std::endl;
     return ;
   }
+
     file << "          .     .  .      +     .      .          .\n";
     file << "     .       .      .     #       .           .\n";
     file << "        .      .         ###            .      .      .\n";
@@ -62,5 +57,6 @@ void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
     file << "       .         .   .   000     .        .       .\n";
     file << ".. .. ..................O000O........................ ......\n";
 
+  this->setFormStatus(true);
   file.close();
 }

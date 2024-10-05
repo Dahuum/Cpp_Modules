@@ -8,6 +8,7 @@ class AForm {
     bool isSigned;
     const int GRADE_REQUIRED_TO_SIGN;
     const int GRADE_REQUIRED_TO_EXECUTE;
+    mutable bool formStatus;
 
     public:
       AForm();
@@ -40,6 +41,10 @@ class AForm {
       bool getSignStatus() const;
       int getGradeToSign() const;
       int getGradeToExecute() const;
+
+      // Getter / Setter
+      bool getFormStatus() const;
+      void setFormStatus(bool status) const;
 
       // Sign Functions
       void beSigned(const Bureaucrat& other);

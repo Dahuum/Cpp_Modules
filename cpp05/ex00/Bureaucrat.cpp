@@ -58,7 +58,6 @@ std::ostream& operator<<(std::ostream& os, const Bureaucrat& obj)
     return os;
 }
 
-
 Bureaucrat::~Bureaucrat()
 {
     std::cout << "Bureaucrat: destructor Called" << std::endl;

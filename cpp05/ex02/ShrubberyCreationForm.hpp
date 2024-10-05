@@ -5,10 +5,6 @@
 
 class ShrubberyCreationForm: public AForm
 {
-  private:
-    int sign;
-    int exec;
-
   public:
     ShrubberyCreationForm();
     ShrubberyCreationForm(const std::string target);

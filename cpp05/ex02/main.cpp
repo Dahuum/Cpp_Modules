@@ -1,4 +1,6 @@
 # include "ShrubberyCreationForm.hpp"
+# include "RobotomyRequestForm.hpp"
+# include "PresidentialPardonForm.hpp"
 
 int main( void )
 {
@@ -6,13 +8,14 @@ int main( void )
   {
     Bureaucrat a("A", 1);
     Bureaucrat b("B", 100);
+    Bureaucrat c("C", 150);
 
-    ShrubberyCreationForm s("VoidMe");
+    RobotomyRequestForm s("VoidMe");
+    ShrubberyCreationForm t("TreeMe");
+    PresidentialPardonForm u("PardonMe");
     a.signForm(s);
     b.signForm(s);
-    s.execute(a);
-    s.execute(b);
-
+    c.signForm(s);
   }
   catch (const std::exception& e)
   {

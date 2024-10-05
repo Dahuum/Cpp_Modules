@@ -1,6 +1,6 @@
 # include "AForm.hpp"
 
-AForm::AForm(): name("Default AForm Name"), isSigned(false), GRADE_REQUIRED_TO_SIGN(1), GRADE_REQUIRED_TO_EXECUTE(1)
+AForm::AForm(): name("Default AForm Name"), isSigned(false), GRADE_REQUIRED_TO_SIGN(1), GRADE_REQUIRED_TO_EXECUTE(1), formStatus(false)
 {
     std::cout << "AForm: Default Constructor Called" << std::endl;
 }
@@ -20,14 +20,14 @@ const char* AForm::NotSignedException::what() const throw()
     return "Not Signed The Form";
 }
 
-AForm::AForm(const std::string N, int gradeToSign, int gradeToExecute): name(N), isSigned(false), GRADE_REQUIRED_TO_SIGN(gradeToSign), GRADE_REQUIRED_TO_EXECUTE(gradeToExecute)
+AForm::AForm(const std::string N, int gradeToSign, int gradeToExecute): name(N), isSigned(false), GRADE_REQUIRED_TO_SIGN(gradeToSign), GRADE_REQUIRED_TO_EXECUTE(gradeToExecute), formStatus(false)
 {
     std::cout << "AForm: Parameterized Constructor Called" << std::endl;
     if (gradeToSign <= 0 || gradeToExecute <= 0) throw GradeTooHighException();
     else if (gradeToSign > 150 || gradeToExecute > 150) throw GradeTooLowException();
 }
 
-AForm::AForm(const AForm& other): name(other.name), isSigned(other.isSigned), GRADE_REQUIRED_TO_SIGN(other.GRADE_REQUIRED_TO_SIGN), GRADE_REQUIRED_TO_EXECUTE(other.GRADE_REQUIRED_TO_EXECUTE)
+AForm::AForm(const AForm& other): name(other.name), isSigned(other.isSigned), GRADE_REQUIRED_TO_SIGN(other.GRADE_REQUIRED_TO_SIGN), GRADE_REQUIRED_TO_EXECUTE(other.GRADE_REQUIRED_TO_EXECUTE), formStatus(other.formStatus)
 {
     std::cout << "AForm: Copy Constructor Called" << std::endl;
 }
@@ -64,6 +64,12 @@ int AForm::getGradeToExecute() const
 {
     return this->GRADE_REQUIRED_TO_EXECUTE;
 }
+
+// Getter / setter
+bool AForm::getFormStatus() const { return this->formStatus; }
+void AForm::setFormStatus(bool status) const { this->formStatus = status; }
+
+
 
 /* beSigned():  Checks if the grade is high enough to sign the aForm. */
 

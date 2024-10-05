@@ -72,6 +72,19 @@ void Bureaucrat::signForm(AForm& other)
     }
 }
 
+void Bureaucrat::executeForm(AForm const & form)
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << this->getName() << " has successfully executed the " << form.getName() << " form" << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cout << this->getName() << " failed to execute " << form.getName() << " due to " << e.what() << std::endl;
+    }
+}
+
 Bureaucrat::~Bureaucrat()
 {
     std::cout << "Bureaucrat: destructor Called" << std::endl;
