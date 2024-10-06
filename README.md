@@ -1,62 +1,40 @@
-# 🚀 Cpp_Modules: Conquer C++ One Day at a Time! 🌟
+# C++ Modules Repository
 
-🎉 **Welcome to Cpp_Modules!** 🎉
+Welcome to the C++ Modules repository! This repository contains links to all my C++ module repositories for easy access.
 
-<div align="center">
-  <img src="rengoku.gif" alt="Rengoku">
-</div>
+## Overview
 
+| Module | Description | Link |
+|--------|-------------|------|
+| Module 00 | Introduction to C++ | [View Repository](https://github.com/48k483x/Cpp-Module-00) |
+| Module 01 | Basic C++ Concepts | [View Repository](https://github.com/48k483x/Cpp-Module-01) |
+| Module 02 | Object-Oriented Programming | [View Repository](https://github.com/48k483x/Cpp-Module-02) |
+| Module 03 | Advanced C++ Features | [View Repository](https://github.com/48k483x/Cpp-Module-03) |
+| Module 04 | Standard Template Library | [View Repository](https://github.com/48k483x/Cpp-Module-04) |
+| Module 05 | Exception Handling | [View Repository](https://github.com/48k483x/Cpp-Module-05) |
+| Module 06 | File I/O | [View Repository](https://github.com/48k483x/Cpp-Module-06) |
+| Module 07 | Multithreading | [View Repository](https://github.com/48k483x/Cpp-Module-07) |
+| Module 08 | Networking | [View Repository](https://github.com/48k483x/Cpp-Module-08) |
+| Module 09 | Final Project | [View Repository](https://github.com/48k483x/Cpp-Module-09) |
 
-Dive into the exciting world of C++ programming with a unique blend of fun and functionality. This repo is your ultimate playground to explore, learn, and master C++ at your own pace.
+## Quick Links
 
-## 🌟 Features
+- [Module 00](https://github.com/48k483x/Cpp-Module-00)
+- [Module 01](https://github.com/48k483x/Cpp-Module-01)
+- [Module 02](https://github.com/48k483x/Cpp-Module-02)
+- [Module 03](https://github.com/48k483x/Cpp-Module-03)
+- [Module 04](https://github.com/48k483x/Cpp-Module-04)
+- [Module 05](https://github.com/48k483x/Cpp-Module-05)
+- [Module 06](https://github.com/48k483x/Cpp-Module-06)
+- [Module 07](https://github.com/48k483x/Cpp-Module-07)
+- [Module 08](https://github.com/48k483x/Cpp-Module-08)
+- [Module 09](https://github.com/48k483x/Cpp-Module-09)
 
-### 🔥 **Daily Challenges**
-* **Day 1: Hello, World!** 🌎
-* **Day 2: Control the Flow** 🚦
-* **Day 3: Function Frenzy** 🔄
-* **Day 4: Object-Oriented Overload** 🏗️
-* **Day 5: The Final Frontier** 🚀
+## Contributing
 
-### 💡 **Tips & Tricks**
-- **Hack Your Code** 🧠: Discover insider tips to write clean and efficient C++ code.
-- **Best Practices** 💡: Learn the dos and don'ts of C++ programming.
+Feel free to contribute to any of the modules or reach out for collaboration!
 
-### 📚 **In-depth Tutorials**
-- **Step-by-step Guides** 📘: Comprehensive tutorials to take you from novice to expert.
-- **Deep Dives** 🌊: Explore advanced topics in detail.
+## License
 
-### 🛠️ **Code Samples**
-- **Real-world Examples** 💻: Practical code samples to help you understand key concepts.
-- **Snippets** ✂️: Handy snippets to save you time and effort.
+This repository is licensed under the MIT License. See the LICENSE file for more information.
 
-### 🤖 **Projects and Exercises**
-- **Mini Projects** 🔧: Fun projects to apply your knowledge.
-- **Coding Exercises** 🏋️: Sharpen your skills with challenging exercises.
-
-## 🎯 Goals
-
-- 📈 **Enhance your understanding of C++**.
-- 🏗️ **Build a solid foundation in C++ programming**.
-- 🌍 **Apply C++ concepts to real-world projects**.
-- 🧠 **Sharpen your coding skills with regular practice**.
-
-## 🚀 Get Started
-
-1. **Clone the Repo**: `git clone https://github.com/48k483x/Cpp_Modules.git`
-2. **Navigate to the Directory**: `cd Cpp_Modules`
-3. **Start Learning**: Dive into the modules and start coding!
-
-## 🤝 Contribution Guidelines
-
-We welcome contributions! Feel free to open issues and submit pull requests to help us improve this repository. Check out our [Contribution Guidelines](CONTRIBUTING.md) for more details.
-
-## 💬 Connect
-
-- 📧 **Email**: abderrahmanech@outlook.fr
-- 🐦 **Twitter**: [@48K483X](https://twitter.com/48k483x)
-- 💼 **LinkedIn**: [@abkabex](https://www.linkedin.com/in/abdurrahman-chahrour-bb0865265/)
-
----
-
-🌟 **Happy Coding!** 🌟
