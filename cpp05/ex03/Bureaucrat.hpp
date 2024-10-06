@@ -2,7 +2,6 @@
 
 # include <iostream>
 # include <string.h>
-# include <cstdbool>
 # include "AForm.hpp"
 
 class AForm;

@@ -2,6 +2,8 @@
 
 # include "AForm.hpp"
 # include <fstream>
+#include <cstdlib>
+
 
 class RobotomyRequestForm: public AForm
 {
