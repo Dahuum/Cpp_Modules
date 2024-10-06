@@ -10,9 +10,9 @@ int main()
     Bureaucrat highGrade("CEO", 1);
 
     // Test all valid form types
-    AForm* shrubbery = intern.makeForm("ShrubberyCreationForm", "Garden");
-    AForm* robotomy = intern.makeForm("RobotomyRequestForm", "Bender");
-    AForm* pardon = intern.makeForm("PresidentialPardonForm", "Zaphod");
+    AForm* shrubbery = intern.makeForm("Shrubbery request", "Garden");
+    AForm* robotomy = intern.makeForm("Robotomy request", "Bender");
+    AForm* pardon = intern.makeForm("Presidential pardon", "Zaphod");
 
     // Test an invalid form type
     AForm* invalidForm = intern.makeForm("InvalidFormType", "Test");
