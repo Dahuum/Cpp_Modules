@@ -2,9 +2,6 @@
 
 Welcome to the C++ Modules repository! Below is a structured overview of all my C++ module repositories.
 
-## Repository Structure
-
-
 ## Quick Links
 
 - [Module 00](https://github.com/48k483x/Cpp-Module-00)
@@ -21,7 +18,3 @@ Welcome to the C++ Modules repository! Below is a structured overview of all my 
 ## Contributing
 
 Feel free to contribute to any of the modules or reach out for collaboration!
-
-## License
-
-This repository is licensed under the MIT License. See the LICENSE file for more information.
