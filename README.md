@@ -4,7 +4,6 @@ Welcome to the C++ Modules repository! Below is a structured overview of all my 
 
 ## Repository Structure
 
-```plaintext
 cpp_modules/
 ├── [Module 00](https://github.com/48k483x/Cpp-Module-00)/
 ├── [Module 01](https://github.com/48k483x/Cpp-Module-01)/
